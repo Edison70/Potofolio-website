@@ -1,0 +1,114 @@
+.mywork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 50px 100px;
+}
+
+.mywork-title {
+    position: relative;
+    
+}
+
+.mywork-title h1 {
+    padding: 0px 30px;
+    font-size: 30px; 
+    font-weight: 600;
+}
+
+.mywork-title img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: -1;
+    width: 100%; 
+    height: auto;
+}
+
+.mywork-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; /* Adjust gap between items */
+    justify-content: center; /* Center items horizontally */
+    max-width: 100%; /* Ensures container width does not exceed its parent */
+}
+
+.mywork-container img {
+    flex: 1 1 calc(33.333% - 20px); /* Each item takes up approximately one-third of the container width, minus the gap */
+    max-width: calc(33.333% - 20px); /* Ensures items do not exceed one-third of the container width */
+    box-sizing: border-box; /* Includes padding and border in the item's total width and height */
+    object-fit: cover; /* Ensures images cover their container without distortion */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    transition: 0.3s;
+    cursor: pointer;
+}
+.mywork-container img:hover {
+    transform: scale(1.10);
+    border: 4px solid #ff00ff;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.mywork-showmore {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    gap: 15px; /* Space between text and icon */
+    border-radius: 50px; /* Rounded corners */
+    border: 2px solid white; /* White border */
+    font-size: 10px; /* Small font size */
+    font-weight: 200; /* Light font weight */
+    margin-bottom: 20px; /* Space below the button */
+    transition: 0.6s; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 20px; /* Add some padding inside the button */
+    background-color: transparent; /* Transparent background (adjust as needed) */
+    color: white; /* Text color */
+}
+
+
+.mywork-showmore:hover {
+    background-color: black; /* Background color on hover */
+    color: black; /* Text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    gap: 30px
+}
+
+
+.mywork-showmore p {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+@media(max-width:768px) {
+    .mywork {
+    gap: 50px;
+    margin: 50px 70px;
+    align-items: start;
+    }
+    .mywork-title h1 {
+    padding: 0;
+    font-size: 50px;
+    font-weight: 600;
+    }
+    .mywork-title img {
+        width: 130%;
+        margin-right: -20px;
+    }
+   .mywork-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+   }
+   .mywork-container img {
+    width: 100%;
+    height: 100%;
+   }
+   .mywork-showmore {
+    padding: 20px 40px;
+    font-size: 18px;
+    margin: 50px auto;
+    cursor: pointer;
+   }
+}
